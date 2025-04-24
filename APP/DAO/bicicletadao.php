@@ -4,7 +4,7 @@ class bicicletadao {
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "INSERT INTO bicicletas (modeloBike, marcaBike, quadroBike, corBike, valorBike)
+        $sql = "INSERT INTO bicicleta (modeloBike, marcaBike, quadroBike, corBike, valorBike)
                 VALUES (:modelo, :marca, :quadro, :cor, :valor)";
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindValue(':modelo', $bicicleta->getModelo());
@@ -26,7 +26,7 @@ class bicicletadao {
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM bicicletas ORDER BY idBike";
+        $sql = "SELECT * FROM bicicleta ORDER BY idBike";
         return $conex->conn->query($sql);
     }
 
@@ -34,7 +34,7 @@ class bicicletadao {
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM bicicletas WHERE idBike='$idBike'";
+        $sql = "SELECT * FROM bicicleta WHERE idBike='$idBike'";
         return $conex->conn->query($sql);
     }
 
@@ -42,7 +42,7 @@ class bicicletadao {
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "UPDATE bicicletas SET modeloBike=:modelo, marcaBike=:marca, 
+        $sql = "UPDATE bicicleta SET modeloBike=:modelo, marcaBike=:marca, 
                 quadroBike=:quadro, corBike=:cor, valorBike=:valor WHERE idBike=:id";
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindValue(':id', $bicicleta->getID());
@@ -65,7 +65,7 @@ class bicicletadao {
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "DELETE FROM bicicletas WHERE idBike='$idBike'";
+        $sql = "DELETE FROM bicicleta WHERE idBike='$idBike'";
         $res = $conex->conn->query($sql);
         
         if($res){

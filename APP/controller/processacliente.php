@@ -18,9 +18,11 @@ function incluir(){
     $cpfCli = $_POST["cpfCli"];
     $enderecoCli = $_POST["enderecoCli"];
     $telefoneCli = $_POST["telefoneCli"];
+    $emailCli = $_POST["emailCli"];
+    $senhaCli = $_POST["senhaCli"];
     include 'clientecontroller.php';
     $contr = new clientecontroller();
-    $contr->cadastrarCliente($nomeCli, $cpfCli, $enderecoCli, $telefoneCli);
+    $contr->cadastrarCliente($nomeCli, $cpfCli, $enderecoCli, $telefoneCli, $emailCli, $senhaCli);
 }
 
 function alterar(){
@@ -28,10 +30,12 @@ function alterar(){
     $cpfCli = $_POST["cpfCli"];
     $enderecoCli = $_POST["enderecoCli"];
     $telefoneCli = $_POST["telefoneCli"];
+    $emailCli = $_POST["emailCli"];
+    $senhaCli = $_POST["senhaCli"];
     $idCli = $_POST["idCli"];
     include 'clientecontroller.php';
     $contr = new clientecontroller();
-    $contr->alterarCliente($idCli, $nomeCli, $cpfCli, $enderecoCli, $telefoneCli);
+    $contr->alterarCliente($idCli, $nomeCli, $cpfCli, $enderecoCli, $telefoneCli, $emailCli, $senhaCli);
 }
 
 function excluir(){

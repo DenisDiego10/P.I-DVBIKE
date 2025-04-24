@@ -18,6 +18,7 @@ if ($operacao == "Alterar") {
     $cpfCli = $row->cpfCli;
     $enderecoCli = $row->enderecoCli;
     $telefoneCli = $row->telefoneCli;
+    $emailCli = $row->emailCli;
     $idCli = $row->idCli;
     
     $operacao = "Alterar";

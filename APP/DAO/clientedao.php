@@ -4,13 +4,15 @@ class clientedao {
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "INSERT INTO clientes (nomeCli, cpfCli, enderecoCli, telefoneCli)
-                VALUES (:nome, :cpf, :endereco, :telefone)";
+        $sql = "INSERT INTO clientes (nomeCli, cpfCli, enderecoCli, telefoneCli, emailCli, senhaCli)
+                VALUES (:nome, :cpf, :endereco, :telefone, :email, :senha)";
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindValue(':nome', $cliente->getNome());
         $stmt->bindValue(':cpf', $cliente->getCpf());
         $stmt->bindValue(':endereco', $cliente->getEndereco());
         $stmt->bindValue(':telefone', $cliente->getTelefone());
+        $stmt->bindValue(':email', $cliente->getEmail());
+        $stmt->bindValue(':senha', $cliente->getSenha());
         $res = $stmt->execute();
         
         if($res){
@@ -42,13 +44,15 @@ class clientedao {
         $conex = new Conexao();
         $conex->fazConexao();
         $sql = "UPDATE clientes SET nomeCli = :nome, cpfCli = :cpf,
-                enderecoCli = :endereco, telefoneCli = :telefone WHERE idCli = :id";
+                enderecoCli = :endereco, telefoneCli = :telefone, emailCli = :email, senhaCli = :senha WHERE idCli = :id";
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindValue(':id', $cliente->getID());
         $stmt->bindValue(':nome', $cliente->getNome());
         $stmt->bindValue(':cpf', $cliente->getCpf());
         $stmt->bindValue(':endereco', $cliente->getEndereco());
         $stmt->bindValue(':telefone', $cliente->getTelefone());
+        $stmt->bindValue(':email', $cliente->getEmail());
+        $stmt->bindValue(':senha', $cliente->getSenha());
         $res = $stmt->execute();
         
         if($res){
