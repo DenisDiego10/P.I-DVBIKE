@@ -14,17 +14,17 @@ if ($operacao == "Alterar") {
     $qtd = $res->rowCount();
     $row = $res->fetch(PDO::FETCH_OBJ);
     $nomeCli = $row->nomeCli;
-    $matriculaCli = $row->matriculaCli;
+    $senhaCli = $row->senhaCli;
     $cpfCli = $row->cpfCli;
     $enderecoCli = $row->enderecoCli;
     $telefoneCli = $row->telefoneCli;
     $idCli = $row->idCli;
-    $emailCli = $row->emailCli;
+    
     $operacao = "Alterar";
 }
 else {
     $nomeCli = "";
-    $matriculaCli = "";
+    $senhaCli = "";
     $cpfCli = "";
     $enderecoCli = "";
     $telefoneCli = "";
@@ -36,8 +36,8 @@ else {
 print "<form method='post' action='../controller/processacliente.php'>";
 print "    <label for='nomeCli'>Nome:</label>";
 print "    <input type='text' name='nomeCli' value=".$nomeCli."><br>";
-print "    <label for='matriculaCli'>Matrícula:</label>";
-print "    <input type='text' name='matriculaCli' value=".$matriculaCli."><br>";
+print "    <label for='senhaCli'>Senha:</label>";
+print "    <input type='text' name='senhaCli' value=".$senhaCli."><br>";
 print "    <label for='cpfCli'>CPF:</label>";
 print "    <input type='text' name='cpfCli' value=".$cpfCli."><br>";
 print "    <label for='enderecoCli'>Endereço:</label>";

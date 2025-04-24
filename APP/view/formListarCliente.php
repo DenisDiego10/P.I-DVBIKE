@@ -15,7 +15,7 @@
         print "<tr>";
         print "<th>#</th>";
         print "<th>Nome</th>";
-        print "<th>Matrícula</th>";
+        print "<th>Senha</th>";
         print "<th>CPF</th>";
         print "<th>Endereço</th>";
         print "<th>Telefone</th>";
@@ -26,7 +26,7 @@
             print "<tr>";
             print "<td>".$row->idCli."</td>";
             print "<td>".$row->nomeCli."</td>";
-            print "<td>".$row->matriculaCli."</td>";
+            print "<td>".$row->senhaCli."</td>";
             print "<td>".$row->cpfCli."</td>";
             print "<td>".$row->enderecoCli."</td>";
             print "<td>".$row->telefoneCli."</td>";

@@ -8,26 +8,37 @@ class clientemodel
     protected $enderecoCli;
     protected $telefoneCli;
 
+    protected $emailCli;
+    protected $senhaCli;
+
     // Construtor
-    public function __construct($idCli, $nomeCli, $cpfCli, $enderecoCli, $telefoneCli)
+    public function __construct($idCli, $nomeCli, $cpfCli, $enderecoCli, $telefoneCli, $senhaCli, $emailCli)
     {
         $this->idCli = $idCli;
         $this->nomeCli = $nomeCli;
         $this->cpfCli = $cpfCli;
         $this->enderecoCli = $enderecoCli;
         $this->telefoneCli = $telefoneCli;
+        $this->emailCli = $emailCli;
+        $this->senhaCli = $senhaCli;    
     }
     
     public function getID()
     {
         return $this->idCli;
     }
-
+    public function getSenha()
+    {
+    return $this->senhaCli;
+    }
     public function getNome()
     {
         return $this->nomeCli;
     }
-
+    public function getEmail()
+    {
+    return $this->emailCli;
+    }
     public function setNome($nomeCli)
     {
         $this->nomeCli = $nomeCli;
