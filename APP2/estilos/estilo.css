@@ -2,7 +2,7 @@
     body{background-image: url('../img/FUNDODV.webp');
         background-size: cover;
     }
-    .container{
+   /* .container{
         background-color: #171C20;
         color: #FFFFFF;
         text-align: center;
@@ -11,7 +11,7 @@
         background-color: #171C20;
         color: #FFFFFF;
         text-align: center;
-    }
+    }*/
     html{
         background-color: #101119;
     }
@@ -43,12 +43,16 @@
         left: 10%;
         margin-right: auto;
     }
-    .entrar,.cadastrar{
+    .entrar,.cadastrar,.operacoes{
         width: 200px;
         font-size: 24px;
         margin-left: auto;
         right: 0;
         background-color: #CDCDCD;
+    }
+    .tabela{
+        position: absolute;
+        bottom: 0;
     }
     #login{
         display: flex;

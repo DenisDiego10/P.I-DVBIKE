@@ -10,7 +10,8 @@ switch($_REQUEST["op"])
     case "Listar":
         listar();break;
     default:
-        echo "nao encontrou chave";
+        /*echo "nao encontrou chave";*/
+        listar();
 }
 
 function incluir(){

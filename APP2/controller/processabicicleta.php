@@ -9,7 +9,8 @@ switch($_REQUEST["op"]) {
     case "Listar":
         listar(); break;
     default:
-        echo "Operação não encontrada";
+        /*echo "Operação concluída!";*/
+        listar();
 }
 
 function incluir() {
