@@ -58,7 +58,7 @@
         }
     </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <header>
         <div class="container-fluid">
             <div class="row">
@@ -135,7 +135,7 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="index.html"><img height="100px" src="../img/Logo D.VBike.png"></a>
+                    <a href="../index.html"><img height="100px" src="../img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">

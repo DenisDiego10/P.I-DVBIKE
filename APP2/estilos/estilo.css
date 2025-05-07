@@ -1,8 +1,13 @@
 @media (min-width: 576px) {
     body{background-image: url('../img/FUNDODV.webp');
         background-size: cover;
+        color: #FFFFFF;
+        height: 100%;
     }
-   /* .container{
+    p{
+        color: #FFFFFF;
+    }
+    /*.container{
         background-color: #171C20;
         color: #FFFFFF;
         text-align: center;
@@ -13,7 +18,8 @@
         text-align: center;
     }*/
     html{
-        background-color: #101119;
+        height: 100%;
+        background-color: #171C20;
     }
     header,footer{
         color: #FFFFFF;
@@ -22,6 +28,7 @@
         width: 100%;
     }
     footer{
+        flex-shrink: 0;
         position: absolute;
         margin-top: auto;
         bottom: 0;
@@ -45,7 +52,7 @@
     }
     .entrar,.cadastrar,.operacoes{
         width: 200px;
-        font-size: 24px;
+        font-size: 12px;
         margin-left: auto;
         right: 0;
         background-color: #CDCDCD;
@@ -59,14 +66,14 @@
         flex-direction: column;
 
     }
-    #textos{
+    #textos,.quemsomos,.pedaleconosco,.testemunhos{
+        color: #FFFFFF;
         font-size: 16px;
         height: 25%;
         background-color: #171C20;
         display: flex;
         align-items: center;
         margin: 1%;
-        
     }
     .testemunhos{
         background-color: #171C20;

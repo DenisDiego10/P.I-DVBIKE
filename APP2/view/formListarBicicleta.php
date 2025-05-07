@@ -69,8 +69,8 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
-<body>
-    <header>
+<body class="d-flex flex-column min-vh-100">
+<header>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm">
@@ -81,28 +81,27 @@
                 <div class="col-sm">
                     <h2 class="titulo">DV Bike</h2>
                 </div>
-                <div class="operacoes" class="col-sm" id="login">
-                    <button onclick="location.href ='../view/formCliente.php?op=Incluir'">Incluir Cliente</button>
-                    <button onclick="location.href ='../view/formListarCliente.php?op=Listar'">Listar Clientes</button>
-                    <button onclick="location.href ='../view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
-                    <button onclick="location.href ='../view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button>
-                    <!--button class="entrar">
-                            <a href="pages/login.html">Entrar</a>
-                        </button>
-                        <button class="cadastrar">
-                            <a href="pages/cadastro.html">Cadastrar-se</a>
-                        </button-->
+                <div class="col-sm">
+                    <div class="operacoes" id="login">
+                        <button onclick="location.href ='../view/formCliente.php?op=Incluir'">Incluir Cliente</button>
+                        <button onclick="location.href ='../view/formListarCliente.php?op=Listar'">Listar Clientes</button>
+                        <button onclick="location.href ='../view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
+                        <button onclick="location.href ='../view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button>
+                        <!--button class="entrar">
+                                <a href="pages/login.html">Entrar</a>
+                            </button>
+                            <button class="cadastrar">
+                                <a href="pages/cadastro.html">Cadastrar-se</a>
+                            </button-->
+                        </div>
                 </div>
             </div>
         </div>
-        </div>
+       
 
 
     </header>
     <div class="container">
-        <h1>Bicicletas Cadastradas</h1>
-        <a href="formBicicleta.php" class="action-link">Nova Bicicleta</a>
-
         <?php
         include("../controller/bicicletacontroller.php");
         $res = bicicletacontroller::listarBicicletas();
@@ -145,7 +144,7 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="index.html"><img height="100px" src="../img/Logo D.VBike.png"></a>
+                    <a href="../index.html"><img height="100px" src="../img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">
