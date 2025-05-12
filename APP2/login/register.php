@@ -3,24 +3,24 @@ session_start();
 require 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nomeCli = $_POST['nomeCli'];
-    $senhaCli = $_POST['senhaCli'];
-    $senhaCli_confirm = $_POST['senhaCli_confirm'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $password_confirm = $_POST['password_confirm'];
 
     // Verifica se as senhas coincidem
-    if ($senhaCli !== $senhaCli_confirm) {
+    if ($password !== $password_confirm) {
         $error = 'As senhas não coincidem.';
     } else {
         // Verifica se o nome de usuário já existe
-        $stmt = $pdo->prepare("SELECT * FROM cliente  WHERE nomeCli = ?");//users = cliente  username = nomeCli
-        $stmt->execute([$nomeCli]);
+        $stmt = $pdo->prepare("SELECT * FROM users  WHERE username = ?");//users = users  username = username
+        $stmt->execute([$username]);
         if ($stmt->fetch()) {
             $error = 'Nome de usuário já existe.';
         } else {
             // Insere o novo usuário no banco de dados
-            $hashed_senhaCli = password_hash($senhaCli, PASSWORD_BCRYPT);
-            $stmt = $pdo->prepare("INSERT INTO cliente (nomeCli, senhaCli) VALUES (?, ?)");
-            if ($stmt->execute([$nomeCli, $hashed_senhaCli])) {
+            $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+            $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+            if ($stmt->execute([$username, $hashed_password])) {
                 $success = 'Usuário registrado com sucesso. Você pode fazer login agora.';
             } else {
                 $error = 'Erro ao registrar o usuário. Tente novamente.';
@@ -44,13 +44,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php endif; ?>
     <form method="POST">
         <label>Nome de usuário:</label>
-        <input type="text" name="nomeCli" required>
+        <input type="text" name="username" required>
         <br>
         <label>Senha:</label>
-        <input type="senhaCli" name="senhaCli" required>
+        <input type="password" name="password" required>
         <br>
         <label>Confirme a senha:</label>
-        <input type="senhaCli" name="senhaCli_confirm" required>
+        <input type="password" name="password_confirm" required>
         <br>
         <button type="submit">Registrar</button>
     </form>

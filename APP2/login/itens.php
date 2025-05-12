@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Consulta ao banco de dados para obter os itens
-$stmt = $pdo->query("SELECT * FROM itens");
+$stmt = $pdo->query("SELECT * FROM items");
 $items = $stmt->fetchAll();
 ?>
 
@@ -19,7 +19,7 @@ $items = $stmt->fetchAll();
     <title>Listagem de Itens</title>
 </head>
 <body>
-    <h2>Bem-vindo, <?php echo htmlspecialchars($_SESSION['nomeCli']); ?>!</h2>
+    <h2>Bem-vindo, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
     <a href="logout.php">Sair</a>
     <h2>Itens</h2>
     <ul>

@@ -1,6 +1,6 @@
 <?php
 $host = '127.0.0.1';
-$db = 'dvbike';
+$db = 'dbsecoes';
 $users = 'root';
 $pass = '';
 $charset = 'utf8mb4';
@@ -13,7 +13,7 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO($dsn, $cliente, $pass, $options);
+    $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
