@@ -105,16 +105,16 @@
                     <h2 class="titulo">DV Bike</h2>
                 </div>
                 <div class="col-sm" id="login">
-                    <button onclick="location.href ='view/formCliente.php?op=Incluir'">Incluir Cliente</button>
+                    <!--button onclick="location.href ='view/formCliente.php?op=Incluir'">Incluir Cliente</button>
                     <button onclick="location.href ='view/formListarCliente.php?op=Listar'">Listar Clientes</button>
                     <button onclick="location.href ='view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
-                    <button onclick="location.href ='view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button>
-                    <!--button class="entrar">
-                            <a href="pages/login.html">Entrar</a>
+                    <button onclick="location.href ='view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button-->
+                        <button class="entrar">
+                            <a href="../pages/login.php">Entrar</a>
                         </button>
                         <button class="cadastrar">
-                            <a href="pages/cadastro.html">Cadastrar-se</a>
-                        </button-->
+                            <a href="../view/formCliente.php">Cadastrar-se</a>
+                        </button>
                 </div>
             </div>
         </div>

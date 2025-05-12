@@ -50,4 +50,29 @@ function listar()
 {
     include '../view/formListarCliente.php';
 }
+
+function entrarCliente()
+{
+    require '../DAO/conexao.php';
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $stmt = $pdo->prepare("SELECT * FROM cliente WHERE UsuarioCliente = ?");
+        $stmt->execute([$username]);
+        $user = $stmt->fetch();
+
+        if ($user && password_verify($password, $user['Senha'])) {
+            $_SESSION['user_id'] = $user['IDUsuario'];
+            $_SESSION['username'] = $user['UsuarioCliente'];
+            $_SESSION['tipo'] = 'cliente';
+
+            header('Location: page-cliente.php');
+            exit();
+        } else {
+            echo "<script>alert('Nome de usuário ou senha inválidos'); window.location.href='area-cliente.php';</script>";
+        }
+    }
+}
 ?>

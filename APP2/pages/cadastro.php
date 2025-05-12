@@ -105,10 +105,41 @@
                     <h2 class="titulo">DV Bike</h2>
                 </div>
                 <div class="col-sm" id="login">
-                    <button onclick="location.href ='view/formCliente.php?op=Incluir'">Incluir Cliente</button>
+                    <div class="div1cadastro">
+                        <div class="emailcadastro">
+                            <h3>E-Mail</h3>
+                            <p>Input</p>
+                        </div>
+                        <div class="senhacadastro">
+                            <h3>Senha</h3>
+                            <p>Input</p>
+                        </div>
+                        <div class="confirmarsenhacadastro">
+                            <h3>Confirmar Senha</h3>
+                            <p>Input</p>
+                        </div>
+                        <div class="nomecadastro">
+                            <h3>Nome Completo</h3>
+                            <p>Input</p>
+                        </div>
+                        <div class="telefonecadastro">
+                            <h3>Telefone</h3>
+                            <p>Input</p>
+                        </div>
+                        <div class="enderecocadastro">
+                            <h3>Endereço</h3>
+                            <p>Input</p>
+                        </div>
+                        <div class="cpfcadastro">
+                            <h3>CPF</h3>
+                            <p>Input</p>
+                        </div>
+                        <button class="confirmarcadastro">Confirmar</button>
+                    </div>
+                    <!--button onclick="location.href ='view/formCliente.php?op=Incluir'">Incluir Cliente</button>
                     <button onclick="location.href ='view/formListarCliente.php?op=Listar'">Listar Clientes</button>
                     <button onclick="location.href ='view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
-                    <button onclick="location.href ='view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button>
+                    <button onclick="location.href ='view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button-->
                     <!--button class="entrar">
                             <a href="pages/login.html">Entrar</a>
                         </button>
