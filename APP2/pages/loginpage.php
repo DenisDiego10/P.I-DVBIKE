@@ -3,12 +3,12 @@ session_start();
 
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <title>DV Bikes - Cadastro</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>DV Bike - Login</title>
     <link href="../estilos/reset.css" rel="stylesheet" />
     <link href="../estilos/estilo.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
@@ -26,7 +26,7 @@ session_start();
                     </div>
                 </div>
                 <div class="col-sm">
-                    <h2 class="titulo">DV Bikes</h2>
+                    <h2 class="titulo">DV Bike</h2>
                 </div>
                 <div class="col-sm text-right">
                     <button class="entrar btn btn-outline-primary mr-2">
@@ -41,38 +41,49 @@ session_start();
     </header>
 
     <main class="container mt-5">
-        <h2 class="text-light">Cadastro de Novo Usuário</h2>
-        <form method="POST" action="../login/register.php">
-            <div class="form-group">
-                <label class="text-light" for="nomeCli">Nome Completo:</label>
-                <input type="text" class="form-control" id="nomeCli" name="nomeCli" required />
+        <?php
+        require '../login/config.php';
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $username = isset($_POST['nomeCli']) ? $_POST['nomeCli'] : '';
+            $senhaCli = isset($_POST['senhaCli']) ? $_POST['senhaCli'] : '';
+
+            $stmt = $pdo->prepare("SELECT * FROM clientes WHERE nomeCli = ?");
+            $stmt->execute([$username]);
+            $user = $stmt->fetch();
+
+            if ($user && password_verify($senhaCli, $user['senhaCli'])) {
+                $_SESSION['user_id'] = $user['idCli'];
+                $_SESSION['username'] = $user['nomeCli'];
+                header('Location: index2.php');
+                exit();
+            } else {
+                $error = 'Nome de usuário ou senha inválidos';
+            }
+        }
+        ?>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-light">Login</h2>
+     <!--           <?php if (isset($error)): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo htmlspecialchars($error); ?>
+                    </div>
+                <?php endif; ?>-->
+                <form method="POST" action="loginpage.php">
+                    <div class="form-group">
+                        <label for="nomeCli" class="text-light">Nome de usuário:</label>
+                        <input type="text" class="form-control" id="username" name="nomeCli" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="senhaCli" class="text-light">Senha:</label>
+                        <input type="password" class="form-control" id="senhaCli" name="senhaCli" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label class="text-light" for="cpfCli">CPF:</label>
-                <input type="text" class="form-control" id="cpfCli" name="cpfCli" required />
-            </div>
-            <div class="form-group">
-                <label class="text-light" for="enderecoCli">Endereço:</label>
-                <input type="text" class="form-control" id="enderecoCli" name="enderecoCli" required />
-            </div>
-            <div class="form-group">
-                <label class="text-light" for="telefoneCli">Telefone:</label>
-                <input type="text" class="form-control" id="telefoneCli" name="telefoneCli" required />
-            </div>
-            <div class="form-group">
-                <label class="text-light" for="emailCli">Email:</label>
-                <input type="email" class="form-control" id="emailCli" name="emailCli" required />
-            </div>
-            <div class="form-group">
-                <label class="text-light" for="senhaCli">Senha:</label>
-                <input type="password" class="form-control" id="senhaCli" name="senhaCli" required />
-            </div>
-            <div class="form-group">
-                <label class="text-light" for="senhaConfirm">Confirmar Senha:</label>
-                <input type="password" class="form-control" id="senhaConfirm" name="senhaConfirm" required />
-            </div>
-            <button type="submit" class="btn btn-primary">Confirmar</button>
-        </form>
+        </div>
     </main>
 
     <footer class="footer mt-5 py-4 bg-light">

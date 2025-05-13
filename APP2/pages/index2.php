@@ -1,10 +1,22 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['logout'])) 
+{
+    session_start();
+    session_unset();
+    session_destroy();
+    header('Location: loginpage.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <style></style>
-    <link href="estilos/reset.css" rel="stylesheet">
-    <link href="estilos/estilo.css" rel="stylesheet">
+    <link href="../estilos/reset.css" rel="stylesheet">
+    <link href="../estilos/estilo.css" rel="stylesheet">
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,25 +34,16 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="index.html"><img height="100px" src="img/Logo D.VBike.png"></a>
+                        <a href="index.php"><img height="100px" src="img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">
                     <h2 class="titulo">DV Bike</h2>
                 </div>
                 <div class="col-sm">
-                    <div class="operacoes" id="login">
-                        <button onclick="location.href ='view/formCliente.php?op=Incluir'">Incluir Cliente</button>
-                        <button onclick="location.href ='view/formListarCliente.php?op=Listar'">Listar Clientes</button>
-                        <button onclick="location.href ='view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
-                        <button onclick="location.href ='view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button>
-                        <!--button class="entrar">
-                                <a href="pages/login.html">Entrar</a>
-                            </button>
-                            <button class="cadastrar">
-                                <a href="pages/cadastro.html">Cadastrar-se</a>
-                            </button-->
-                        </div>
+                <form method="POST" class="operacoes" id="login" action="loginpage.php">
+                    <button type="submit" name="logout">Sair</button>
+                </form>
                 </div>
             </div>
         </div>
@@ -183,7 +186,7 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="index.html"><img height="100px" src="img/Logo D.VBike.png"></a>
+                        <a href="index.php"><img height="100px" src="img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">

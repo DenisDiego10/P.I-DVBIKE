@@ -1,78 +1,3 @@
-<!--
-<!DOCTYPE HTML>
-<html lang="pt-br">
-
-<head>
-	<title>DV Bikes</title>
-	<meta charset="UTF-8" />
-	<link href="../estilos/reset.css" rel="stylesheet">
-	<link href="../estilos/estilo.css" rel="stylesheet">
-</head>
-
-<body>
-	<header>
-		<div class="dvbikeslogo">
-			<a href="../index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
-		</div>
-		<h2 class="titulo">DV Bikes</h2>
-		<button class="entrar">
-			<a href="../pages/login.html">Entrar</a>
-		</button>
-		<button class="cadastrar">
-			<a href="../pages/cadastro.html">Cadastrar-se</a>
-		</button>
-
-	</header>
-	<main>
-		<div class="div1cadastro">
-			<div class="emailcadastro">
-				<h3>E-Mail</h3>
-				<p>Input</p>
-			</div>
-			<div class="senhacadastro">
-				<h3>Senha</h3>
-				<p>Input</p>
-			</div>
-			<div class="confirmarsenhacadastro">
-				<h3>Confirmar Senha</h3>
-				<p>Input</p>
-			</div>
-			<div class="nomecadastro">
-				<h3>Nome Completo</h3>
-				<p>Input</p>
-			</div>
-			<div class="telefonecadastro">
-				<h3>Telefone</h3>
-				<p>Input</p>
-			</div>
-			<div class="enderecocadastro">
-				<h3>Endereço</h3>
-				<p>Input</p>
-			</div>
-			<div class="cpfcadastro">
-				<h3>CPF</h3>
-				<p>Input</p>
-			</div>
-			<button class="confirmarcadastro">Confirmar</button>
-		</div>
-	</main>
-	<footer>
-		<div class="dvbikeslogo">
-			<a href="../index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
-		</div>
-		<p class="endereco">
-			RUA BENJAMIN CONSTANT 2236
-		</p>
-		<div class="links">
-			<img height="70px" src="../img/instagram logo.webp">
-			<img height="70px" src="../img/linkedin icon.png">
-			<img height="70px" src="../img/youtube icon.png">
-			<img height="70px" src="../img/x logo.png">
-		</div>
-	</footer>
-</body>
-
-</html-->
 <?php
 session_start();
 
@@ -81,11 +6,12 @@ session_start();
 <html lang="en">
 
 <head>
+    <style></style>
+    <link href="estilos/reset.css" rel="stylesheet">
+    <link href="estilos/estilo.css" rel="stylesheet">
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../estilos/reset.css" rel="stylesheet">
-    <link href="../estilos/estilo.css" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -100,89 +26,163 @@ session_start();
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="../index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
+                        <a href="index.php"><img height="100px" src="img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">
                     <h2 class="titulo">DV Bike</h2>
                 </div>
-                <div class="col-sm" id="login">
-                    <!--button onclick="location.href ='view/formCliente.php?op=Incluir'">Incluir Cliente</button>
-                    <button onclick="location.href ='view/formListarCliente.php?op=Listar'">Listar Clientes</button>
-                    <button onclick="location.href ='view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
-                    <button onclick="location.href ='view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button-->
-                        <button class="entrar">
-                            <a href="../pages/login.php">Entrar</a>
-                        </button>
-                        <button class="cadastrar">
-                            <a href= class="text-light" "../view/formCliente.php">Cadastrar-se</a>
-                        </button>
+                <div class="col-sm">
+                    <div class="operacoes" id="login">
+                        <button onclick="location.href ='view/formCliente.php?op=Incluir'">Incluir Cliente</button>
+                        <button onclick="location.href ='view/formListarCliente.php?op=Listar'">Listar Clientes</button>
+                        <button onclick="location.href ='view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
+                        <button onclick="location.href ='view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button>
+                        <button onclick="location.href ='pages/loginpage.php'">Entrar</button>
+                        </div>
                 </div>
             </div>
         </div>
-        </div>
+       
 
 
     </header>
     <main>
-    <?php
-session_start();
-require 'config.php';
+        <div class="container w-25">
+            <div class="row">
+                <div class="col-sm">
+                    <h2 class="telefone text-center">
+                        51-33787878
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" height="300px" width="300px" src="./img/PRODUTO1.png"
+                        alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" height="300px" width="300px" src="./img/PRODUTO1.png"
+                        alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" height="300px" width="300px" src="./img/PRODUTO1.png"
+                        alt="Primeiro Slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $senhaCli = $_POST['senhaCli'];
+        <div class="container-fluid">
+            <div class="row" id="textos">
+                <div class="col-sm" id="botoes">
+                    <div class="btn-group-vertical" role="group" aria-label="Exemplo básico">
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bicicletas
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="./pages/produtos.html">Bicicletas Aro 26</a>
+                                <a class="dropdown-item" href="#">Bicicletas Infantis</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary">Acessórios</button>
+                        <button type="button" class="btn btn-secondary">Peças</button>
+                        <button type="button" class="btn btn-secondary">Vestuário</button>
+                    </div>
+                    <!--div class="menuprodutos">
+                            <button class="linkprodutos"><a href="pages/produtos.html">Bicicletas Aro 26<br></a>
+                            </button>
+                            <button class="linkprodutos">Bicicletas Infantis</button>
+                            <button class="linkprodutos">Acessórios</button>
+                            <button class="linkprodutos">Peças</button>
+                            <button class="linkprodutos">Vestuário</button>
+                        </div-->
+                </div>
+                <div class="col-sm">
+                    <div class="quemsomos text-white text-center">
+                        <h3>Quem somos</h3>
+                        <p>
+                            Olá Ciclista, somos a D.V. Bike, estamos no mercado de bicicletas especializadas a mais
+                            de
+                            20
+                            anos.
+                            Sempre com o compromisso de ser a melhor loja de bicicleta de Porto Alegre, inovando na
+                            forma de
+                            atender você ciclista novo ou experiente.
+                            Localizada na ZN de POA, a D.V. Bike Shop é equipada com toda info das maiores Bike Shop
+                            do
+                            mundo, manutenção profissional especializada e experiência única.
+                            Visitar a D.V Bike é realmente encantador, venha se deslumbrar com nossos produtos e
+                            profissionais capacitados para uma experiência completa.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="pedaleconosco text-white text-center">
+                        <h3>Pedale Conosco</h3>
+                        <p>
+                            Venha fazer parte do super passeio noturno pelas ruas de POA.
+                            Todas as quartas-feiras as 19:30, saindo da D.V. Bike shop tenha uma experiência
+                            especial
+                            pedalando em grupo e tendo uma nova forma de conhecer a cidade.
+                            Efetue cadastro no site para ganhar um super brinde da loja.
+                            Menores de 18 anos acompanhado de um responsável.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="testemunhos text-white text-center">
+                <h2>Testemunhos</h2>
+                <p>
+                    "Adorei, a loja é muito bonita o atendimento é muito bom e tem todos os tipos de bicicletas.
+                    A parte de vestuário é muito bacana."
+                    - Sando Silva <br>
+                    "Conheci a loja através de uma amiga e então comprei a minha primeira bicicleta, junto com o passeio
+                    criei uma nova rotina e lifestyle."
+                    - Márcia Silva <br>
+                    "Incrível, pessoal muito atencioso e adorei a bicicleta que me foi sugerida, atendimento top."
+                    - Maria Diniz <br>
+                </p>
 
-    // Consulta ao banco de dados para verificar o usuário
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->execute([$username]);
-    $user = $stmt->fetch();
+            </div>
 
-    if ($user && password_verify($senhaCli, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
-        header('Location: itens.php');
-        exit();
-    } else {
-        $error = 'Nome de usuário ou senha inválidos';
-    }
-}
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <?php if (isset($error)): ?>
-        <p style="color:red;"><?php echo $error; ?></p>
-    <?php endif; ?>
-    <form method="POST">
-        <label>Nome de usuário:</label>
-        <input type="text" name="nomeCli" required>
-        <br>
-        <label>Senha:</label>
-        <input type="senhaCli" name="senhaCli" required>
-        <br>
-        <button type="submit">Entrar</button>
-    </form>
-</body>
+        </div>
 
 
-
-</html>
-
-
+        <!--div class="carrossel">
+                <h2>Trabalhamos com:</h2>
+                <img height="100px" src="./img/LOGOCALOI.png">
+                <img height="100px" src="./img/LOGOCANNON.png">
+                <img height="100px" src="./img/LOGOMERIDA.png">
+                <img height="100px" src="./img/LOGOSPECIALIZED.png">
+                <img height="100px" src="./img/LOGOTREK.png">
+            </div-->
 
     </main>
-    <footer class="footer">
+    <footer class="footer2">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="../index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
+                        <a href="index.php"><img height="100px" src="img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">

@@ -1,30 +1,24 @@
 <?php
 session_start();
-require 'config.php';
+require '../controller/clientecontroller.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $password_confirm = $_POST['password_confirm'];
+    $nomeCli = $_POST['nomeCli'] ?? '';
+    $cpfCli = $_POST['cpfCli'] ?? '';
+    $enderecoCli = $_POST['enderecoCli'] ?? '';
+    $telefoneCli = $_POST['telefoneCli'] ?? '';
+    $emailCli = $_POST['emailCli'] ?? '';
+    $senhaCli = $_POST['senhaCli'] ?? '';
+    $senhaConfirm = $_POST['senhaConfirm'] ?? '';
 
-    // Verifica se as senhas coincidem
-    if ($password !== $password_confirm) {
+    if ($senhaCli !== $senhaConfirm) {
         $error = 'As senhas não coincidem.';
     } else {
-        // Verifica se o nome de usuário já existe
-        $stmt = $pdo->prepare("SELECT * FROM users  WHERE username = ?");//users = users  username = username
-        $stmt->execute([$username]);
-        if ($stmt->fetch()) {
-            $error = 'Nome de usuário já existe.';
-        } else {
-            // Insere o novo usuário no banco de dados
-            $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-            $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
-            if ($stmt->execute([$username, $hashed_password])) {
-                $success = 'Usuário registrado com sucesso. Você pode fazer login agora.';
-            } else {
-                $error = 'Erro ao registrar o usuário. Tente novamente.';
-            }
+        try {
+            clientecontroller::cadastrarCliente($nomeCli, $cpfCli, $enderecoCli, $telefoneCli, $emailCli, password_hash($senhaCli, PASSWORD_BCRYPT));
+            $success = 'Usuário registrado com sucesso. Você pode fazer login agora.';
+        } catch (Exception $e) {
+            $error = 'Erro ao registrar o usuário: ' . $e->getMessage();
         }
     }
 }
@@ -43,14 +37,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <p style="color:green;"><?php echo $success; ?></p>
     <?php endif; ?>
     <form method="POST">
-        <label>Nome de usuário:</label>
-        <input type="text" name="username" required>
+        <label>Nome Completo:</label>
+        <input type="text" name="nomeCli" required>
+        <br>
+        <label>CPF:</label>
+        <input type="text" name="cpfCli" required>
+        <br>
+        <label>Endereço:</label>
+        <input type="text" name="enderecoCli" required>
+        <br>
+        <label>Telefone:</label>
+        <input type="text" name="telefoneCli" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="emailCli" required>
         <br>
         <label>Senha:</label>
-        <input type="password" name="password" required>
+        <input type="password" name="senhaCli" required>
         <br>
-        <label>Confirme a senha:</label>
-        <input type="password" name="password_confirm" required>
+        <label>Confirmar Senha:</label>
+        <input type="password" name="senhaConfirm" required>
         <br>
         <button type="submit">Registrar</button>
     </form>
