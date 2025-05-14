@@ -34,16 +34,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['logout']))
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
+                        <a href="../pages/index2.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">
                     <h2 class="titulo">DV Bike</h2>
                 </div>
                 <div class="col-sm">
-                <form method="POST" class="operacoes" id="login" action="loginpage.php">
+                <form method="POST" class="operacoes" id="login" action="../index.php">
                     <button type="submit" name="logout">Sair</button>
                 </form>
+                <button onclick="location.href ='../view/formCliente.php?op=Incluir'">Incluir Cliente</button>
+                        <button onclick="location.href ='../view/formListarCliente.php?op=Listar'">Listar Clientes</button>
+                        <button onclick="location.href ='../view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
+                        <button onclick="location.href ='../view/formListarBicicleta.php?op=Listar'">Listar Bicicletas</button>
                 </div>
             </div>
         </div>
@@ -101,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['logout']))
                                 Bicicletas
                             </button>
                             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <a class="dropdown-item" href="./pages/produtos.html">Bicicletas Aro 26</a>
+                                <a class="dropdown-item" href="produtos2.html">Bicicletas Aro 26</a>
                                 <a class="dropdown-item" href="#">Bicicletas Infantis</a>
                             </div>
                         </div>
@@ -186,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['logout']))
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="index.php"><img height="100px" src="img/Logo D.VBike.png"></a>
+                        <a href="../pages/index2.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">

@@ -1,7 +1,7 @@
 @media (min-width: 576px) {
     body{background-image: url('../img/FUNDODV.webp');
         background-size: cover;
-        color: #171C20;
+        background-color: #171C20;
         height: 100%;
     }
     p{
@@ -18,7 +18,6 @@
         text-align: center;
     }*/
     html{
-        height: 100%;
         background-color: #171C20;
     }
     header,footer{
@@ -254,6 +253,6 @@
 body{
     background-size: cover;
     background-color: #171C20;
-    color: #171C20;
+    color: #ffffff;
     height: 100%;
 }

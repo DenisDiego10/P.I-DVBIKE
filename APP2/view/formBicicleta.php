@@ -79,7 +79,7 @@ session_start();
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="../index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
+                        <a href="../pages/index2.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">
@@ -87,6 +87,9 @@ session_start();
                 </div>
                 <div class="col-sm">
                     <div class="operacoes" id="login">
+                    <form method="POST" class="operacoes" id="login" action="../index.php">
+                    <button type="submit" name="logout">Sair</button>
+                </form>
                         <button onclick="location.href ='../view/formCliente.php?op=Incluir'">Incluir Cliente</button>
                         <button onclick="location.href ='../view/formListarCliente.php?op=Listar'">Listar Clientes</button>
                         <button onclick="location.href ='../view/formBicicleta.php?op=Incluir'">Incluir Bicicleta</button>
@@ -158,7 +161,7 @@ session_start();
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="../index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
+                        <a href="../pages/index2.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">
