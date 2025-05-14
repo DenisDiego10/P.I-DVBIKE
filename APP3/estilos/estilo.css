@@ -1,0 +1,129 @@
+/* RESET GERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #171C20;
+    color: #ffffff;
+  }
+  
+  /* CONTAINERS E GRIDS */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  
+  /* FLEX E TEXTOS */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* TIPOGRAFIA BASE */
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p, a, li {
+    font-size: 1rem;
+  }
+  
+  /* BLOCOS COMUNS */
+  .operacoes {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .telefone {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+  
+  .titulo {
+    font-size: 3rem;
+    text-align: left;
+    width: auto;
+  }
+  
+  /* === MOBILE === */
+  @media (max-width: 768px) {
+    .titulo {
+      font-size: 2rem;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .operacoes {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .telefone {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .container {
+      padding: 0 10px;
+    }
+  
+    .logo img {
+      height: 60px;
+      display: block;
+      margin: auto;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .divprodutos {
+      flex-direction: column;
+    }
+  
+    .quemsomos, .pedaleconosco {
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .titulo {
+      font-size: 1.2rem;
+    }
+  }
