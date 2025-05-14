@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['logout']))
             <div class="row">
                 <div class="col-sm">
                     <div class="logo">
-                        <a href="index.php"><img height="100px" src="img/Logo D.VBike.png"></a>
+                        <a href="index.php"><img height="100px" src="../img/Logo D.VBike.png"></a>
                     </div>
                 </div>
                 <div class="col-sm">
@@ -69,15 +69,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['logout']))
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" height="300px" width="300px" src="./img/PRODUTO1.png"
+                    <img class="d-block w-100" height="300px" width="300px" src="../img/PRODUTO1.png"
                         alt="Primeiro Slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" height="300px" width="300px" src="./img/PRODUTO1.png"
+                    <img class="d-block w-100" height="300px" width="300px" src="../img/PRODUTO1.png"
                         alt="Primeiro Slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" height="300px" width="300px" src="./img/PRODUTO1.png"
+                    <img class="d-block w-100" height="300px" width="300px" src="../img/PRODUTO1.png"
                         alt="Primeiro Slide">
                 </div>
             </div>

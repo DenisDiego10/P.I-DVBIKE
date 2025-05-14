@@ -26,11 +26,7 @@ session_start();
             background-repeat: no-repeat;
         }
 
-        .container {
-            background-color: transparent;
-            padding: 20px;
-        }
-
+    
         table {
             border-collapse: collapse;
             width: 100%;
@@ -47,7 +43,7 @@ session_start();
         }
 
         th {
-            background-color: #00adb5;
+            background-color: #6c757d;
         }
 
         tr:nth-child(even) {
@@ -55,7 +51,7 @@ session_start();
         }
 
         a.action-link {
-            background-color: #00adb5;
+            background-color: #6c757d;
             color: white;
             padding: 6px 12px;
             margin-right: 5px;
@@ -65,7 +61,7 @@ session_start();
         }
 
         a.action-link:hover {
-            background-color: #028a94;
+            background-color: #6c757d;
         }
     </style>
      <!-- Bootstrap CSS -->

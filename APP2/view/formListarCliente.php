@@ -42,13 +42,13 @@ session_start();
             text-align: left;
         }
         th {
-            background-color: #00adb5;
+            background-color: #6c757d;
         }
         tr:nth-child(even) {
             background-color: #393e46;
         }
         button.action-btn {
-            background-color: #00adb5;
+            background-color: #6c757d;
             border: none;
             color: white;
             padding: 6px 12px;
@@ -58,7 +58,7 @@ session_start();
             font-size: 14px;
         }
         button.action-btn:hover {
-            background-color: #028a94;
+            background-color: #6c757d;
         }
     </style>
 </head>

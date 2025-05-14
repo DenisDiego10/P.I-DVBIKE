@@ -46,7 +46,7 @@ session_start();
         }
         input[type="submit"] {
             margin-top: 20px;
-            background-color: #00adb5;
+            background-color: #6c757d;
             border: none;
             color: white;
             padding: 10px 20px;
@@ -55,7 +55,7 @@ session_start();
             font-size: 16px;
         }
         input[type="submit"]:hover {
-            background-color: #028a94;
+            background-color: #6c757d;
         }
     </style>
      <!-- Bootstrap CSS -->

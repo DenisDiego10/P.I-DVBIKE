@@ -1,7 +1,7 @@
 @media (min-width: 576px) {
     body{background-image: url('../img/FUNDODV.webp');
         background-size: cover;
-        color: #FFFFFF;
+        color: #171C20;
         height: 100%;
     }
     p{
@@ -72,6 +72,10 @@
         background-color: #171C20;
         align-items: center;
         margin: 1%;
+    }
+    .container {
+        background-color: transparent;
+        padding: 20px;
     }
     .testemunhos{
         background-color: #171C20;
@@ -243,4 +247,13 @@
     margin: 10px 30% 10px 30%;
     background-color: #CDCDCD;
 }*/
+}
+
+
+
+body{
+    background-size: cover;
+    background-color: #171C20;
+    color: #171C20;
+    height: 100%;
 }
